@@ -1,0 +1,625 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+
+
+
+
+@import "../node_modules/bootstrap/dist/css/bootstrap-grid.min.css";
+@import "../node_modules/bootstrap/dist/css/bootstrap-reboot.min.css";
+@import "../node_modules/@progress/kendo-theme-material/scss/all";
+
+
+
+
+// @import "../node_modules/bootstrap/dist/css/bootstrap-grid.css";
+// @import "../node_modules/bootstrap/dist/css/bootstrap-reboot.css";
+// @import "theme/kendo-theme-material/scss/all";
+// @import "theme/kendo-theme-material/modules/@progress/kendo-theme-default/scss/grid";
+// @import "theme/kendo-theme-material/modules/@progress/kendo-theme-default/scss/splitter";
+// @import "theme/kendo-theme-material/modules/@progress/kendo-theme-default/scss/dialog";
+// @import "theme/kendo-theme-material/modules/@progress/kendo-theme-default/scss/notification";
+// @import "theme/kendo-theme-material/modules/@progress/kendo-theme-default/scss/tabstrip";
+// @import "./fonts/stylesheet.css";
+@import "style-variables.scss";
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height:5px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background:#ededed; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:rgba(181, 181, 181, 0.87); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background:rgba(162, 159, 159, 0.87); 
+}
+
+// kendo-overide============================
+.k-treeview ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    outline:none;
+}
+.k-grid-content {
+    overflow-y: auto !important;
+}
+.k-grid-header{
+    padding:0 !important;
+}
+.k-treeview .k-item{
+    border-bottom: 1px solid gainsboro !important;
+    padding:0px !important;
+    cursor:pointer;
+}
+.k-treeview .k-in.k-state-focused {
+    box-shadow: none;
+}
+.k-treeview .k-in {
+	width: 100%;
+}
+.k-treeview  .k-item{
+    position:relative;
+}
+.k-treeview .ng-star-inserted[role="group"] li[role="treeitem"] span{
+	    padding-left:39px;
+}
+.k-treeview .k-i-expand, .k-treeview .k-i-collapse {
+    margin-left:0 !important;
+    cursor: pointer;
+}
+.k-treeview .k-i-collapse:focus-within{
+    color: white;
+}
+.k-treeview .k-in {
+    padding: 8px 38px;
+}
+.k-treeview .k-i-expand, .k-treeview .k-i-collapse {
+    margin-left:10px !important;
+    cursor: pointer;
+    position: absolute;
+    z-index: 8 !important;
+    top: 12px;
+}
+.k-treeview .k-in.k-state-selected {
+    color: #fff;
+    background-color:#00997d;;
+}
+.icon-class{
+	margin-right: 10px !important;
+}
+.k-dropdown .k-dropdown-wrap {
+    background-clip: padding-box;
+    font-size: 13px;
+}
+.k-grid {
+    border-color: rgba(0, 0, 0, 0.12);
+    color: rgba(0, 0, 0, 0.87);
+    background-color: white;
+    background-clip: padding-box;
+    border-left: 0px;
+}
+.app-list-grid .k-grid-aria-root{
+	    min-height: calc(100vh - 220px);
+}
+.k-grid-pager {
+    border-top: 1px solid #f1e7e7;
+}
+.k-grid {
+    border-top:none;
+    border-right: none;
+  
+}
+
+.font-size-25
+{
+    font-size: 25px;
+}
+.updatebtn
+{
+background-color: #373798;
+color: white;
+}
+.green-bold
+{
+    font-size: 25px;
+    font-weight: bold;
+    color: #00997d;
+}
+.red-bold
+{
+    font-size: 25px;
+    font-weight: bold;
+    color: #e74c3c;
+}
+.k-i-loading{
+    display: block;
+    position:fixed;
+    font-size: 60px;
+    left: 50%;
+    top: 45%;
+    color:#3498db;
+}
+.loading-overlay{
+    position: absolute;
+    background-color:rgba(178, 178, 177, 0);
+    height: 100%;
+    width: 100%;
+    z-index: 100000;
+   
+}
+.action-bar-form-group .k-dropdown .k-dropdown-wrap{
+    border: 1px solid gainsboro;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 0px 4px 4px 0px;
+    overflow: hidden;
+}
+.action-bar-form-group .k-textbox-container::after{
+	display: none;
+}
+.action-bar-form-group .k-input{
+    height:36px;
+    text-indent: 10px;
+}
+.clearfix{
+	display: block;
+    clear: both;
+}
+.filter-wrapp .k-textbox-container {
+    padding-top: 4.5px;
+}
+.primary-button-info{
+	background:$btn-primary;
+    box-shadow: none;
+    color: white;
+}
+.primary-button-default{
+    background: $btn-default;
+    box-shadow: none;
+    color: #848484;
+}
+.primary-button-link{
+    background: #ffffff;
+    box-shadow: none;
+    color: #0c6fbf;
+    text-decoration: underline;
+}
+.primary-button-link-small{
+    background: transparent;
+    box-shadow: none;
+    color: #0c6fbf;
+    text-decoration: underline;
+    padding: 3px 12px;
+    font-size: 13px;
+    vertical-align: unset;
+}
+.primary-button-link-small:hover{
+    background: transparent;
+    color: #0884e8;
+    text-decoration:none;
+}
+.submit-button-default{
+    background:$btn-submit;
+    box-shadow: none;
+    color: #848484;
+}
+.left-section .k-rpanel-left, .k-rpanel-right {
+    min-width:auto;
+        z-index: 8;
+}
+.dynamic-form-container  .k-textarea-wrapper {
+    // padding-top: 20px !important;
+    margin-top: 15px !important;
+}
+.left-section .k-treeview .k-in {
+    padding: 10px 38px;
+}
+.left-section kendo-treeview{
+    height: calc(100vh - 170px);
+}
+.k-grid th, .k-grid td {
+    padding: 4px 24px;
+    font-size: 13px;
+    color: #5b5252;
+}
+.k-grid th {
+    padding: 9px 24px;
+    color: #5d7e99;
+    background: rgba(63, 81, 181, 0.050980392156862744);
+    text-transform: uppercase;
+}
+.k-grid tbody tr:hover, .k-grid tbody tr.k-state-hover, .k-grid tbody td.k-state-focused, .k-grid tbody th.k-state-focused {
+    background-color: rgba(0, 0, 0, 0.03);
+    cursor: pointer;
+}
+.right-section {
+	background: #f6f6f6;
+}
+.filter-wrapp .k-dropdown,.filter-wrapp .k-textbox-container{
+    width: 90% !important;
+}
+.k-notification-group {
+    z-index: 99999999999999;
+    right: 8px !important;
+}
+.k-autocomplete .k-input, .k-dateinput-wrap .k-input, .k-dropdown-wrap .k-input, .k-picker-wrap .k-input, .k-multiselect-wrap .k-input, .k-numeric-wrap .k-input {
+    font-size: 14px;
+}
+.k-textbox, .k-textarea, .k-input.k-textbox {
+    font-size: 14px;
+}
+.action-wrapper{
+    display: block;
+    white-space: nowrap;
+}
+.action-wrapper button{
+    margin-right:10px; 
+}
+.align-middle-content{
+    display:inline-block;
+    min-height: 260px;
+}
+.no-data-strip{
+
+}
+.k-grid-norecords {
+    text-align: left!important;
+    display: table-row!important;
+}
+.agri-input-label{
+    vertical-align:middle;
+}
+.agri-header input{
+    height: 25px;
+    border-bottom: 1px solid #afafaf;
+    border-top:none;
+    border-left: none;
+    border-right:none;
+    background-color: transparent;
+    padding-left: 14px;
+    margin: 4px;
+    margin-right: 10px;
+    width: 104px;
+    border-radius:6px;
+    padding-right: 14px;
+    width:300px;
+    line-height:18px;
+}
+.agri-header input:hover {
+    background-color: rgba(0, 0, 0, 0.050980392156862744);
+}
+.agri-header  input::placeholder {
+   font-style:italic;
+}
+.agri-header  input:focus {
+   background-color:white;
+   border-radius:6px;
+   outline:none;
+   width:300px;
+}
+.input-wrapp{
+    display: inline-block;
+    height: 33px;
+    width:auto;
+    position: absolute;
+    right:10px;  
+    background-color: #eaeaea;
+}
+.k-grid-norecords{
+    background-color:#faf9ed !important;
+}
+.no-data-strip{
+    color: #c08f47;
+    font-weight: 500;
+}
+.list-cursor tr{
+    cursor:default !important;
+}
+.k-window{
+    max-height: calc(100vh - 120px);
+    min-height: 168px;
+    overflow: auto;
+}
+
+.popup-footer{
+    margin-top: 20px;
+    text-align: right;
+}
+input[type=text]::-ms-clear {
+    display: none;
+}
+.duplicate-compo{
+    width:100% !important;
+}
+
+.activeClass
+{
+    color: green;
+}
+.inActiveClass
+{
+    color: red;
+}
+span.filter-date + kendo-popup 
+{
+    z-index: 1000 !important;
+}
+
+
+// ------------------Media Queries-----------------------------------
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+.agri-header input{
+    transition: 0.3s;
+
+}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+	.left-section{
+		// min-height:100vh;
+		height:inherit;
+
+}
+.menu-sign-out{
+	display: none;
+}
+.logo-space-menu{
+    display:none;
+}
+}
+
+
+/*==========  Non-Mobile First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	.left-section{
+		max-width: 280px;
+}
+.logo-space-top{
+    display:none !important;
+}
+.app-header-right{
+    max-width: 100%;
+    flex: 100%;
+}
+.left-section{
+    min-width: 100px;
+    background-color: #eaf0f0;
+    border-right: 1px solid $gray-500;
+    height: 100vh !important;
+    top: 0 !important;
+    z-index: 9999 !important;
+}
+.top-bar-log-out{
+    display: none !important;
+}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+	.left-section{
+	    height: 100vh;
+	}
+	.login-picture{
+		display: none;
+	}
+
+.k-grid {
+    margin: 12px;
+    border: 1px solid gainsboro;
+}
+
+    
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+.fw-splitter{
+    width:100% !important;
+}
+.breadcrumb-search-wrapp{
+	position: absolute !important;
+	width: 96%;
+}
+.breadcrumb-search-wrapp:focus-within{
+	background-color: whitesmoke;
+}
+.k-dialog-wrapper .k-dialog {
+    width:auto !important;
+}
+.k-upload .k-upload-files .k-file-name {
+    max-width: 75px;
+}
+}
+
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+
+ .input-wrapp:focus-within{
+    display: inline-block;
+    height: 36px;
+    position: absolute;
+    background-color: #eaeaea;
+    width:100%;
+    left:0;
+}   
+.agri-header input:focus{
+    background-color: white;
+    padding-left: 10px;
+    margin: 4px;
+    margin-right: 7px;
+    width: 96% !important;
+    margin-left: 7px;
+}
+.agri-header input{
+    width:150px;
+
+}
+.wrapp-user-profile{
+    width: 120px;
+    display: inline-block;
+    float: right;
+    font-size: 12px;
+    font-weight: normal;
+    height: 60px;
+    padding: 10px 0px 0px 7px;
+    text-align: right;
+    padding-right: 10px !important;
+}
+.button-wrapp .action-btn .k-icon, .button-wrapp .action-btn-submit .k-icon{
+    margin-right:0 !important;
+    height: 36px;
+    line-height: 36px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.button-wrapp .action-btn, .button-wrapp .action-btn-submit{
+    min-width:auto  !important;
+}
+	.wrapp-user-profile{
+	display:none !important;
+	}
+}
+.fw-required label:not(.k-radio-label)::after{ 
+    content:"*" !important;
+    color:#f31700;
+    padding-left:5px;
+}
+th.fw-required.k-header::before {
+    content: "*" !important; color: #f31700;
+opacity: 0.8;
+} 
+.fw-error, .fw-error span, .fw-error .k-dropdown-wrap, .fw-error .k-picker-wrap, .fw-error .k-multiselect-wrap,.fw-error .k-numeric-wrap { 
+    border-color: #f31700 !important;
+    } .text-danger{
+        color:#f31700 !important;
+        }
+
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
+
+}
+
+  .file-icon-class
+{
+    width: 21px;
+    height: 19px;
+    margin-right: 7px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+}
+.file-data-name{
+    vertical-align: middle;
+    display: inline-block;
+    width: 85%;
+    line-height: 19px;
+    font-size: 13px;
+    color: #277bbe;
+}
+.grid-details{
+    margin: 10px;
+}
+.k-overlay {
+    animation-play-state: paused !important;
+    display: none !important;
+}
+.app-list-grid .k-grid td:first {
+    
+    padding-left:0px !important; 
+
+}
+td:has(+ div){
+
+border-left: 10px solid red;
+}
+.app-list-grid td:first-child{
+    position: relative;
+}
+.filter-border-top{
+    border-top: 1px solid gainsboro;
+    margin-top: 10px;
+    width: 100%;
+    margin-bottom: 8px;
+    padding-top: 10px;
+}
+.highPrioEventClass::before
+{
+    height: 100Vh;
+    left: 0px;
+    border-left: 5px solid #e74c3c;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+}
+.highPrioEventClass{
+    color:#e74c3c
+}
+
+.dupeEventClass::before
+{
+    height: 100Vh;
+    left: 0px;
+    border-left: 5px solid #3498db !important;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+}
+.dupeEventClass{
+color:#3498db !important;
+
+}
+.blockedEventClass::before
+{
+    height: 100Vh;
+    left: 0px;
+    border-left: 5px solid #95a5a6;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+}
+.blockedEventClass{
+color:#95a5a6;
+
+}
+.sub-inter-grid td:first-child {
+    position: relative;
+}
+.k-dialog-content
+{
+    white-space: pre-line
+}

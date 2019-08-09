@@ -1,0 +1,25 @@
+<div style="margin-bottom: 58px;">
+  <div class="logo-space-menu">
+    <span class="logo-middle-helper"></span>
+    <!-- <img *ngIf="logoUrl" [src]="logoUrl"> -->
+    <!-- <img src="https://placeholder.com/wp-content/uploads/2018/10/placeholder.com-logo3.png"> -->
+
+
+  </div>
+  <kendo-treeview
+        [nodes]="data"
+        textField="text"
+        kendoTreeViewSelectable
+        [(selectedKeys)]="selectedKeys"
+    >
+    <ng-template kendoTreeViewNodeTemplate let-dataItem>
+      <span [ngClass]="dataItem.icon"></span>
+      {{dataItem.text}}
+  </ng-template>
+    </kendo-treeview>
+ 
+</div>
+<div class="menu-sign-out">
+
+
+</div>

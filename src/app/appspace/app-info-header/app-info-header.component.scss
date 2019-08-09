@@ -1,0 +1,89 @@
+@import "../../../style-variables.scss";
+
+.top-bar{
+    background:#d9dee2;;
+    color: #f7f4f4;
+    font-size: 18px;
+    font-weight: bold;
+    height: 60px;
+}
+#user_profile{
+    border-radius: 60%;
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+}
+.top-bar-log-out{
+    float: right;
+    vertical-align: middle;
+    height:60px;
+    background-color: #05477b;
+    width: 45px;
+    line-height:60px;
+    text-align: center;
+    cursor: pointer;
+             -webkit-transition: all .25s; /* Safari */
+  	transition: all .25s;
+}
+.top-bar-log-out:hover{
+	background-color: #2196F3;
+}
+.top-bar-app-name{
+    height: 60px;
+    display: inline-block;
+    line-height: 60px;
+    padding-left:8px;
+}
+.top-bar-user-name{
+	display:block;
+	font-weight:bold;
+	font-size:13px;
+	text-transform:capitalize;
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+.top-bar-user-info{
+	display:block;
+	font-size:11px;
+	text-transform:capitalize;
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+.wrapp-user-profile{
+    width: 120px;
+    display: inline-block;
+    float: right;
+    font-size: 12px;
+    font-weight: normal;
+    height: 60px;
+    padding: 10px 0px 0px 7px;
+    text-align: right;
+}
+.user_profile-wrapp{
+	height: 60px;
+    display: inline-block;
+    float: right;
+    padding: 10px;
+}
+.user_profile-wrapp img{
+ 	width: 100%;
+}
+.toggle-btn-custom{
+    background: none;
+    color: white;
+    border: none;
+    height: 60px;
+    line-height: 60px;
+    cursor:pointer;
+    width: 50px;
+}
+.toggle-btn-custom:hover{
+	background-color: #2196f330;
+}
+.toggle-btn-custom .k-icon{
+	margin-top:-5px;
+} 

@@ -1,0 +1,54 @@
+@import "../../../style-variables.scss";
+
+
+.left-section{
+	min-width: 100px;
+    background-color:#43bbbb;
+    border-right: 1px solid $gray-400;
+    position: fixed !important;
+    height: calc(100vh - 112px);
+    top: 112px;
+    z-index:1000 !important;
+}
+.k-rpanel-left, .k-rpanel-right {
+    z-index:9;
+}
+.right-section {
+    min-width: 305px;
+    right: 0;
+    float: right;
+    position: absolute;
+    background-color: white;
+    
+}
+.logo-space-top{
+	height: 112px;
+    display: inline-block;
+    z-index: 999;
+    position: relative;
+    background-color: #2d826a;
+    padding: 12px !important;
+    border-bottom: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    color: white;
+    font-weight: bold;
+}
+.logo-space-top img{
+	width:100%;
+	display:inline-block;
+	vertical-align:middle;
+}
+.logo-middle-helper{
+	display:inline-block;
+	vertical-align:middle;
+	height:76px;
+}
+.app-header{
+	position:fixed;
+	width: 100%;
+	z-index:999;
+}
+.app-content-part{
+	top: 162px;
+    position: relative;
+}
