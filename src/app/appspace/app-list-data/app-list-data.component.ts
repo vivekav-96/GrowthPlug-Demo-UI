@@ -75,11 +75,14 @@ export class AppListDataComponent {
 
   result: any;
   login_check_url = environment.baseUrl + "facebook/is_logged_in";
-
-  constructor(private http: HttpClient) {}
+  dialgData = []
+  constructor(private http: HttpClient,public sanitizer: DomSanitizer) {}
 
   ngOnInit() {
     this.isLoggedIn();
+      this.previewURLSafe = this.sanitizer.bypassSecurityTrustResourceUrl(
+      this.previewURL
+    );
   }
 
   // Read all REST Items
@@ -96,10 +99,10 @@ export class AppListDataComponent {
   get(url: string) {
     return this.http.get<any[]>(url).pipe(map(data => data));
   }
-  // showThis: boolean;
-  // previewURL =
-  //   "https://www.facebook.com/v4.0/dialog/oauth?client_id=1129569717238798&redirect_uri=https://growthplug-demo.herokuapp.com/facebook/register&response_type=token&state={user_id=678501}";
-  // previewURLSafe: any;
+   showThis: boolean;
+  previewURL =
+    "https://www.facebook.com/v4.0/dialog/oauth?client_id=1129569717238798&redirect_uri=https://growthplug-demo.herokuapp.com/facebook/register&response_type=token&state={user_id=678501}";
+  previewURLSafe: any;
   // opened: boolean;
   // constructor(private router: Router, public sanitizer: DomSanitizer) {}
   // ngOnInit() {
@@ -108,11 +111,11 @@ export class AppListDataComponent {
   //   );
   // }
 
-  // goToPage() {
-  //   this.showThis = true;
-  // }
+  goToPage() {
+    this.showThis = true;
+  }
 
-  // public close() {
-  //   this.showThis = false;
-  // }
+  public close() {
+    this.showThis = false;
+  }
 }
