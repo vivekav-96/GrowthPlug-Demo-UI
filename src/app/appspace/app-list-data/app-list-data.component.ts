@@ -7,6 +7,7 @@ import { environment } from "../../../environments/environment";
 import { Subscription } from "rxjs/internal/Subscription";
 import { Router } from "@angular/router";
 import { DomSanitizer } from "@angular/platform-browser";
+import { CompileShallowModuleMetadata } from "@angular/compiler";
 
 @Component({
   selector: "app-app-list-data",
@@ -72,26 +73,28 @@ export class AppListDataComponent {
     }
   ];
 
-  restItems: any;
-  restItemsUrl = environment.baseUrl + "facebook/is_logged_in";
+  result: any;
+  login_check_url = environment.baseUrl + "facebook/is_logged_in";
 
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    this.getRestItems();
+    this.isLoggedIn();
   }
 
   // Read all REST Items
-  getRestItems(): void {
-    this.restItemsServiceGetRestItems().subscribe(restItems => {
-      this.restItems = restItems;
-      alert(restItems["is_logged_in"]);
+  isLoggedIn(): void {
+    this.get(this.login_check_url).subscribe(result => {
+      this.result = result;
+      console.log("status : " + result);
+      if (result["is_logged_in"]) alert("Logged In");
+      else alert("Logged Out");
     });
   }
 
   // Rest Items Service: Read all REST Items
-  restItemsServiceGetRestItems() {
-    return this.http.get<any[]>(this.restItemsUrl).pipe(map(data => data));
+  get(url: string) {
+    return this.http.get<any[]>(url).pipe(map(data => data));
   }
   // showThis: boolean;
   // previewURL =
