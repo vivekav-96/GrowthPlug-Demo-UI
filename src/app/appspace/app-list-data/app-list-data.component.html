@@ -23,7 +23,8 @@
     </kendo-grid-column>
     <kendo-grid-column title="Action" >
             <ng-template kendoGridCellTemplate let-dataItem>
-                    <button (click)="goToPage()" kendoButton class="updatebtn" *ngIf="dataItem.id == 5">Update</button>
+                    <button (click)="goToPage()" kendoButton class="updatebtn" *ngIf="dataItem.id == 5 && isLoggedIn">Update</button>
+                    <button (click)="goToLoginPage()" kendoButton class="updatebtn" *ngIf="dataItem.id == 5 && !isLoggedIn">Login</button>
                 </ng-template>
     </kendo-grid-column>
 </kendo-grid>

@@ -89,6 +89,7 @@ export class AppListDataComponent {
   isLoggedIn(): void {
     this.get(this.login_check_url).subscribe(result => {
       this.result = result;
+      this.isLoggedIn = result["is_logged_in"];
       console.log("status : " + result);
       if (result["is_logged_in"]) alert("Logged In");
       else alert("Logged Out");
@@ -117,5 +118,10 @@ export class AppListDataComponent {
 
   public close() {
     this.showThis = false;
+  }
+
+  goToLoginPage()
+  {
+    window.location.href = this.previewURL
   }
 }
