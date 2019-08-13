@@ -132,7 +132,7 @@ export class AppListDataComponent {
 
   showThis: boolean;
   previewURL =
-    "https://www.facebook.com/v4.0/dialog/oauth?client_id=1129569717238798&redirect_uri=https://growthplug-demo.herokuapp.com/facebook/register&response_type=token&state={user_id=678501}&scope=manage_pages";
+    "https://www.facebook.com/v4.0/dialog/oauth?client_id=1129569717238798&redirect_uri=https://growthplug-ui.herokuapp.com&response_type=token&state={user_id=678501}&scope=manage_pages";
   previewURLSafe: any;
   // opened: boolean;
   // constructor(private router: Router, public sanitizer: DomSanitizer) {}
