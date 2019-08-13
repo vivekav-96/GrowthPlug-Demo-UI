@@ -115,7 +115,8 @@ export class AppListDataComponent {
     let params = new URLSearchParams();
     params.set('user_id',this.userId)
     this.get(this.login_check_url,params).subscribe(result => {
-      this.result = result;
+      result = result.json();
+      this.result =result;
       this.isLoggedIn = result["is_logged_in"];
       console.log("status : " + result);
       // if (result["is_logged_in"]) alert("Logged In");
