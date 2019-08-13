@@ -79,6 +79,7 @@ export class AppListDataComponent {
   dialgData = []
   isShowUpdate: boolean = false;
   updatEXtractor: any;
+  userId = '123456'
   constructor(private http: Http, public sanitizer: DomSanitizer,
     private fb: FormBuilder, private router: Router, private route: ActivatedRoute) { }
 
@@ -102,6 +103,7 @@ export class AppListDataComponent {
     let postUrl = environment.baseUrl + 'facebook/register'
     let params = new URLSearchParams();
     params.set('access_token',accessToken)
+    params.set('user_id',this.userId)
     this.post(postUrl,params).subscribe(result => {     
       console.log("fbstatus : " + result);
       // if (result["is_logged_in"]) alert("Logged In");
@@ -111,7 +113,7 @@ export class AppListDataComponent {
   // Read all REST Items
   isLoggedIn(): void {
     let params = new URLSearchParams();
-    params.set('user_id','124578')
+    params.set('user_id',this.userId)
     this.get(this.login_check_url,params).subscribe(result => {
       this.result = result;
       this.isLoggedIn = result["is_logged_in"];
