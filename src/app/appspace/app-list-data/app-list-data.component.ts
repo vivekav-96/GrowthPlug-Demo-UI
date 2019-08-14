@@ -80,6 +80,7 @@ export class AppListDataComponent {
   isShowUpdate: boolean = false;
   updatEXtractor: any;
   userId = '123456'
+  currentRow: any;
   constructor(private http: Http, public sanitizer: DomSanitizer,
     private fb: FormBuilder, private router: Router, private route: ActivatedRoute) { }
 
@@ -146,23 +147,65 @@ export class AppListDataComponent {
   // }
 
   goToPage() {
+
+    let params = new URLSearchParams();   
+   
+    params.set('user_id',this.userId)
+    let getPageUlr = environment.baseUrl+'facebook/get_pages'
     this.showThis = true;
+    this.get(getPageUlr,params).subscribe(result => {
+      result = result.json();
+      this.dialgData = result['pages'];
+      this.createExtractorForm();
+    });
   }
 
   createExtractorForm() {
     this.updatEXtractor = this.fb.group({
-      extrName: new FormControl('', [Validators.required])
+      website: new FormControl(''),
+      phone: new FormControl(''),
+      emails: new FormControl(''),
+      about: new FormControl('')
     });
   }
 
   public close() {
     this.showThis = false;
+    this.isShowUpdate = false;
   }
 
   goToLoginPage() {
     window.location.href = this.previewURL
   }
-  showUpdate() {
+  showUpdate(dataItem) {
     this.isShowUpdate = true;
+    this.currentRow = dataItem
+  }
+  onBack()
+  {
+    this.isShowUpdate = false;
+  }
+  onSubmit()
+  {
+    let  website = this.updatEXtractor.get('website').value;
+    let  phone = this.updatEXtractor.get('phone').value;
+    let  emails = this.updatEXtractor.get('emails').value;
+    let  about = this.updatEXtractor.get('about').value;
+    let  pageToken = this.currentRow   
+    let  pageId = this.currentRow['id']   
+    let params = new URLSearchParams();      
+    //params.set('user_id',this.userId)
+    params.set('website',website)
+    params.set('phone',phone)
+    params.set('emails',emails)
+    params.set('about',about)
+    params.set('pageToken',pageToken)
+    params.set('pageId',pageId)
+    let updateUrl = environment.baseUrl+'facebook/update_page'
+    this.post(updateUrl,params).subscribe(result => {     
+      console.log("fbstatus : " + result);
+      this.isShowUpdate = false
+      this.currentRow = null
+    });
   }
 }
