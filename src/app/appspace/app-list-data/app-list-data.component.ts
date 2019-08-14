@@ -211,16 +211,19 @@ export class AppListDataComponent {
       this.showThis = false
       this.currentRow = null
       if (result['success'])
-      this.show();
+      this.show('Your data has been saved!','success');
+      else
+      this.show('Failed to save data!','error');
+
     });
   }
-  public show(): void {
+  public show(msg,type): void {
     this.notificationService.show({
-      content: 'Your data has been saved!',
+      content: msg,
       cssClass: 'button-notification',
       animation: { type: 'slide', duration: 400 },
       position: { horizontal: 'right', vertical: 'top' },
-      type: { style: 'success', icon: true },
+      type: { style: type, icon: true },
       hideAfter: 2000,
       closable: true
     });
