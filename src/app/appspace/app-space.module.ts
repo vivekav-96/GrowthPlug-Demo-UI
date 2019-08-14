@@ -13,7 +13,7 @@ import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { DialogsModule } from '@progress/kendo-angular-dialog';
 import { InputsModule } from "@progress/kendo-angular-inputs";
 import { HttpModule } from '@angular/http';
-
+import { NotificationModule } from '@progress/kendo-angular-notification';
 
 
 
@@ -24,7 +24,7 @@ import { HttpModule } from '@angular/http';
     AppListDataComponent,
     AppContainerComponent],
     imports: [
-        HttpModule,
+        HttpModule,NotificationModule,
         AppSpaceRoutingModule,ReactiveFormsModule,
         CommonModule,ButtonsModule,DialogsModule,InputsModule,
         FormsModule,DropDownsModule,TreeViewModule,GridModule
