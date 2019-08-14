@@ -191,7 +191,7 @@ export class AppListDataComponent {
     let  phone = this.updatEXtractor.get('phone').value;
     let  emails = this.updatEXtractor.get('emails').value;
     let  about = this.updatEXtractor.get('about').value;
-    let  pageToken = this.currentRow   
+    let  pageToken = this.currentRow['access_token']   
     let  pageId = this.currentRow['id']   
     let params = new URLSearchParams();      
     //params.set('user_id',this.userId)
