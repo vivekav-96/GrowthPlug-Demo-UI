@@ -160,7 +160,7 @@ export class AppListDataComponent {
         this.dialgData = result['pages'];
         this.createExtractorForm();
       }
-      else
+      else if(!result['is_logged_in'])
       this.goToLoginPage();
     });
   }
