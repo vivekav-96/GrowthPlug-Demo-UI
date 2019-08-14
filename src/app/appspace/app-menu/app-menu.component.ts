@@ -13,10 +13,6 @@ export class AppMenuComponent {
     },
     {
       text: "Website",
-      icon: "k-icon k-i-delicious"
-    },
-    {
-      text: "Website",
       icon: "k-icon k-i-globe-outline"
     },
     {
@@ -41,5 +37,5 @@ export class AppMenuComponent {
     }
   ];
 
-  selectedKeys = ["5"];
+  selectedKeys = ["4"];
 }
